@@ -1,0 +1,49 @@
+﻿@model AirlineAssignment.Models.ManageAirline
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ManageAirlineViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateOrUpdate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AirlineName" class="control-label"></label>
+                <input asp-for="AirlineName" class="form-control" />
+                <span asp-validation-for="AirlineName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromCity" class="control-label"></label>
+                <input asp-for="FromCity" class="form-control" />
+                <span asp-validation-for="FromCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToCity" class="control-label"></label>
+                <input asp-for="ToCity" class="form-control" />
+                <span asp-validation-for="ToCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fare" class="control-label"></label>
+                <input asp-for="Fare" class="form-control" />
+                <span asp-validation-for="Fare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

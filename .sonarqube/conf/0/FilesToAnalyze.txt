@@ -1,0 +1,5 @@
+﻿C:\Users\VIKRANT CHAUDHARY\source\repos\AirlineAssignment\AirlineDBLayer\AirlineDbContext.cs
+C:\Users\VIKRANT CHAUDHARY\source\repos\AirlineAssignment\AirlineDBLayer\Entities\ManageAirline.cs
+C:\Users\VIKRANT CHAUDHARY\source\repos\AirlineAssignment\AirlineDBLayer\Migrations\20220823171930_initialcreate.cs
+C:\Users\VIKRANT CHAUDHARY\source\repos\AirlineAssignment\AirlineDBLayer\Migrations\20220823171930_initialcreate.Designer.cs
+C:\Users\VIKRANT CHAUDHARY\source\repos\AirlineAssignment\AirlineDBLayer\Migrations\AirlineDbContextModelSnapshot.cs

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AirlineAssignment.Models.ManageAirline>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Manage Airlines</h1>
+
+<p>
+    <a asp-action="Create" title="Click on me to create new Airline"   Class="btn btn-secondary btn-lg" data-toggle="button" aria-pressed="false" autocomplete="off">Create New </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AirlineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fare)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirlineName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fare)
+            </td>
+            <td>
+                <a asp-action="Edit" Class="btn btn-info" asp-route-id="@item.Id">Edit</a> 
+                
+                <a  onclick="return confirm('Are you sure you want to delete: @item.AirlineName')"   asp-action="Delete" Class="btn btn-danger"  asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

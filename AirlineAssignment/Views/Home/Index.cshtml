@@ -1,0 +1,77 @@
+﻿@model IEnumerable<AirlineAssignment.Models.ManageAirline>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+body  {
+  background-image: url("/images/AirBack.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+}
+</style>
+
+
+<h1>GO Airlines</h1>
+
+<br />
+
+<h3 class="text-center p-3 mb-2 bg-primary text-white" >Welcome to GO Airlines Online Portal</h3>
+<div>
+<marquee direction="right"> <img src="/images/cat.png" style ="height:100px" />  </marquee></div>
+
+
+
+<form asp-action="Search">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+            <input type="search" name="searchString" class="form-control" placeholder="Enter FlightName or City"/>
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Search" class="btn btn-warning"/>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</form>
+<br />
+<br />
+
+
+<table class="table table-hover  table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AirlineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fare)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirlineName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fare)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
